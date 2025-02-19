@@ -1,0 +1,140 @@
+/*
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    
+}*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.foto {
+    background: white;
+    padding: 15px 15px .1px 15px;
+    width: 300px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto:hover {
+    transform: scale(1.1);
+}
+
+.foto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Ventana emergente */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Efecto cuando aparece la imagen */
+#overlay.mostrar img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Botones de navegación */
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
+#prev:hover, #next:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+        

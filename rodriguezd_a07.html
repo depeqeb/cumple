@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Inputs en Formularios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: calc(50% - 10px);
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"], input[type="reset"], input[type="button"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+            opacity: 0.9;
+        }
+        input[type="image"] {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ejemplo de Inputs en Formularios</h2>
+        <form>
+            <div class="form-group">
+                <label>Botón:</label>
+                <input type="button" value="Haz clic">
+            </div>
+            
+            <div class="form-group">
+                <label>Checkbox:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">Opción 1</label>
+                    <input type="checkbox" id="check2">
+                    <label for="check2">Opción 2</label>
+                    <input type="checkbox" id="check3">
+                    <label for="check3">Opción 3</label>
+                    <input type="checkbox" id="check4">
+                    <label for="check4">Opción 4</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Color:</label>
+                <input type="color">
+            </div>
+            <div class="form-group">
+                <label>Fecha:</label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>Correo Electrónico:</label>
+                <input type="email">
+            </div>
+            <div class="form-group">
+                <label>Archivo:</label>
+                <input type="file">
+            </div>
+            <div class="form-group">
+                <label>Imagen como botón:</label>
+                <input type="image" src="/th.jpg" alt="Botón Imagen">
+            </div>
+            <div class="form-group">
+                <label>Número:</label>
+                <input type="number">
+            </div>
+            <div class="form-group">
+                <label>Contraseña:</label>
+                <input type="password">
+            </div>
+            <div class="form-group">
+                <label>Radio:</label>
+                <div class="radio-group">
+                    <input type="radio" name="opcion" id="radio1">
+                    <label for="radio1">Opción A</label>
+                    <input type="radio" name="opcion" id="radio2">
+                    <label for="radio2">Opción B</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Rango:</label>
+                <input type="range" min="0" max="100">
+            </div>
+            <div class="form-group">
+                <label>Búsqueda:</label>
+                <input type="search">
+            </div>
+            <div class="form-group">
+                <label>Teléfono:</label>
+                <input type="tel">
+            </div>
+            <div class="form-group">
+                <label>Texto:</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label>Hora:</label>
+                <input type="time">
+            </div>
+            <div class="form-group">
+                <label>URL:</label>
+                <input type="url">
+            </div>
+            <div class="form-group">
+                <label>Semana:</label>
+                <input type="week">
+            </div>
+            <div class="form-group">
+                <input type="reset" value="Restablecer">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Galería de imágenes */
+#album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 50px 15px;
+    width: 200px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.polaroid:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.polaroid img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilo del tema debajo de la imagen */
+/* Importar fuente manuscrita */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Estilo del tema debajo de la imagen */
+.tema {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: white;
+    padding: 5px;
+    border-radius: 3px;
+    
+    /* Fuente manuscrita */
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .tema {
+        font-size: 14px;
+    }
+}
+
+
+/* Ventana emergente */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Efecto de aparición */
+#overlay.mostrar img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Botones de navegación */
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#prev { left: 20px; transform: translateY(-50%); }
+#next { right: 20px; transform: translateY(-50%); }
+
+#prev:hover, #next:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .polaroid {
+        width: 150px;
+        padding: 10px 10px 40px 10px;
+    }
+
+    .tema {
+        font-size: 12px;
+    }
+}
+
+.mensaje-despedida {
+    background: linear-gradient(45deg, #ff7a18, #af002d, #f5a623); /* Fondo degradado */
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease-in-out, background 0.5s ease;
+}
+
+.mensaje-despedida:hover {
+    transform: scale(1.05); /* Efecto de agrandar al pasar el ratón */
+    background: linear-gradient(45deg, #f5a623, #ff7a18, #af002d); /* Cambio en el degradado */
+}
+
+.mensaje-despedida::before {
+    content: "❤️ "; /* Icono de corazón antes del texto */
+    font-size: 1.5em;
+}
+
+.mensaje-despedida::after {
+    content: " ❤️"; /* Icono de corazón después del texto */
+    font-size: 1.5em;
+}
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum Interactivo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="foto/v2.mp4" type="video/mp4">
+        
+    </video>
+    <header>
+        <h1>Álbum de Recuerdos de Nosotros</h1>
+    </header>
+
+    <main>
+        <section id="album">
+            <div class="foto" onclick="mostrarImagen(0)">
+                <img src="foto/1.jpeg" alt="Foto 1">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(1)">
+                <img src="foto/2.jpeg" alt="Foto 2">
+                <p>En nuestra cita</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(2)">
+                <img src="foto/3.jpeg" alt="Foto 3">
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(3)">
+                <img src="foto/4.jpeg" alt="Foto 4">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(4)">
+                <img src="foto/5.jpeg" alt="Foto 5">
+                <p>En nuestra cita</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(5)">
+                <img src="foto/6.jpeg" alt="Foto 6">
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(6)">
+                <img src="foto/7.jpeg" alt="Foto 7">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(7)">
+                <img src="foto/8.jpeg" alt="Foto 8">
+                <p>En nuestra cita</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(8)">
+                <img src="foto/9.jpeg" alt="Foto 9">
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(9)">
+                <img src="foto/10.jpeg" alt="Foto 10">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(10)">
+                <img src="foto/11.jpeg" alt="Foto 11">
+                <p>En nuestra cita</p>
+            </div>
+            
+            <div class="foto" onclick="mostrarImagen(12)">
+                <img src="foto/13.jpeg" alt="Foto 13">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(13)">
+                <img src="foto/14.jpeg" alt="Foto 14">
+                <p>En nuestra cita</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(14)">
+                <img src="foto/15.jpeg" alt="Foto 15">
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(15)">
+                <img src="foto/16.jpeg" alt="Foto 16">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(16)">
+                <img src="foto/17.jpeg" alt="Foto 17">
+                <p>En nuestra cita</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(17)">
+                <img src="foto/18.jpeg" alt="Foto 18">
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(18)">
+                <img src="foto/19.jpeg" alt="Foto 19">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(19)">
+                <img src="foto/20.jpeg" alt="Foto 20">
+                <p>En nuestra cita</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(20)">
+                <img src="foto/21.jpeg" alt="Foto 21">
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(21)">
+                <img src="foto/22.jpeg" alt="Foto 22">
+                <p>Un día especial</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(22)">
+                <img src="foto/23.jpeg" alt="Foto 23">
+                <p>En nuestra cita</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(23)">
+                <video src="foto/v1.mp4" width="250" controls></video>
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(24)">
+                <video src="foto/v3.mp4" width="250" controls></video>
+                <p>Recuerdo inolvidable</p>
+            </div>
+            <div class="foto" onclick="mostrarImagen(25)">
+                <video src="foto/v2.mp4" width="250" controls></video>
+                <p>Recuerdo inolvidable</p>
+            </div>
+            
+        </section>
+        <button onclick="window.location.href='Index.html';">Regresar</button>
+    </main>
+
+    <!-- Ventana emergente para la imagen o video -->
+    <div id="overlay" onclick="cerrarImagen()">
+        <button id="prev" onclick="cambiarImagen(-1)">❮</button>
+        <img id="imagen-grande">
+        <video id="video-grande" controls style="display: none;" width="600"></video>
+        <button id="next" onclick="cambiarImagen(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
