@@ -187,3 +187,34 @@ header {
     font-size: 1.5em;
 }
 
+.mensaje-despedida1 {
+    background: linear-gradient(45deg, #ff7a18, #00af0f, #f5e023); /* Fondo degradado */
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    width: 250px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease-in-out, background 0.5s ease;
+}
+
+.mensaje-despedida1:hover {
+    transform: scale(1.05); /* Efecto de agrandar al pasar el ratón */
+    background: linear-gradient(45deg, #00af0f, #ff7a18, #f5e023); /* Cambio en el degradado */
+}
+
+.mensaje-despedida1::before {
+    content: "❤️ "; /* Icono de corazón antes del texto */
+    font-size: 1.5em;
+}
+
+.mensaje-despedida1::after {
+    content: " ❤️"; /* Icono de corazón después del texto */
+    font-size: 1.5em;
+}
