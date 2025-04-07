@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sección 1</title>
+    <link rel="stylesheet" href="formato.css" />
+  </head>
+  <body>
+    <main>
+        <h1>Sección 1</h1>
+
+        <form id="agendarCita" action="https://places-waiting-button-vocals.trycloudflare.com" method="post">
+            <fieldset>
+                <legend>Agendar Cita Romántica</legend>
+                <label for="nombre">Tu Nombre: <input id="nombre" name="nombre" type="text" placeholder="Nombre del invitado" required/></label>
+                
+                
+                <label for="fecha">Fecha de la Cita: <input id="fecha" name="fecha" type="date" required/></label>
+                <label for="hora">Hora de la Cita: <input id="hora" name="hora" type="time" required/></label>
+                
+                <label for="lugar">Lugar de la cita: <input id="lugar" name="lugar" type="text" placeholder="Nombre del lugar" required/></label>
+                
+                <label for="mensaje">Mensaje Especial:
+                    <textarea id="mensaje" name="mensaje" placeholder="Describe un poco la cita" rows="4"></textarea>
+                </label>
+            </fieldset>
+            
+            <button type="submit">Agendar Cita</button>
+        </form>
+        
+        <script>
+            document.getElementById('agendarCita').addEventListener('submit', function(event) {
+                alert('¡Tu cita ha sido agendada con éxito!');
+            });
+        </script>
+        
+        
+    </main>
+  </body>
+</html>
