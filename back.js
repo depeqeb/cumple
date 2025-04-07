@@ -48,6 +48,40 @@ app.post('/submit-cita', (req, res) => {
   });
 });
 
+
+
+// Ruta para obtener todas las citas agendadas
+app.get('/citas', (req, res) => {
+    const query = 'SELECT * FROM citas ORDER BY fecha, hora';
+    db.query(query, (err, results) => {
+      if (err) {
+        console.error('Error al obtener las citas:', err);
+        res.status(500).send('Error al obtener las citas');
+      } else {
+        res.json(results); // Enviamos las citas como respuesta en formato JSON
+      }
+    });
+  });
+
+  
+
+  // Ruta para eliminar una cita
+app.delete('/citas/:id', (req, res) => {
+    const citaId = req.params.id;
+  
+    const query = 'DELETE FROM citas WHERE id = ?';
+    db.query(query, [citaId], (err, result) => {
+      if (err) {
+        console.error('Error al eliminar la cita:', err);
+        res.status(500).send('Error al eliminar la cita');
+      } else {
+        console.log('Cita eliminada exitosamente');
+        res.status(200).send('Cita eliminada');
+      }
+    });
+  });
+
+  
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

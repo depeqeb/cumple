@@ -218,3 +218,35 @@ header {
     content: " ❤️"; /* Icono de corazón después del texto */
     font-size: 1.5em;
 }
+
+
+
+  
+  .mensaje-despedida2 {
+    display: inline-block;
+    background-color: #bb377d;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mensaje-despedida2:hover {
+    background-color: #a62f6d;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mensaje-despedida2:active {
+    transform: translateY(2px);
+  }
+  
+  .mensaje-despedida2:focus {
+    outline: none;
+  }
+  
